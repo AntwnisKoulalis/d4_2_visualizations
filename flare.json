@@ -1,0 +1,741 @@
+{
+    "name": "Products",
+    "children": [
+        {
+            "name": "Cluster1",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Palma Hotel",
+                            "size": 26
+                        },
+                        {
+                            "name": "Pineta Hotel",
+                            "size": 26
+                        },
+                        {
+                            "name": "Histria Hotel",
+                            "size": 26
+                        },
+                        {
+                            "name": "Medulin Hotel",
+                            "size": 26
+                        },
+                        {
+                            "name": "Valdaliso Hotel",
+                            "size": 26
+                        },
+                        {
+                            "name": "Grand Hotel Orebic",
+                            "size": 26
+                        },
+                        {
+                            "name": "Villa Erna",
+                            "size": 26
+                        },
+                        {
+                            "name": "Villa Amfora Dubrovnik",
+                            "size": 26
+                        },
+                        {
+                            "name": "Villa Katarina",
+                            "size": 26
+                        },
+                        {
+                            "name": "Apartments Marina",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel As",
+                            "size": 26
+                        },
+                        {
+                            "name": "Apartments Ana",
+                            "size": 26
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": []
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": [
+                        {
+                            "name": "Hotel Nimfa",
+                            "size": 26
+                        },
+                        {
+                            "name": "Bluesun Hotel  Bonaca",
+                            "size": 26
+                        },
+                        {
+                            "name": "H. Valamar Dubrovnik President",
+                            "size": 26
+                        },
+                        {
+                            "name": "Valamar Club Dubrovnik",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Tirena",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Valamar Club Tamaris",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Mediteran",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Zorna",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Laguna Albatros",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Park ",
+                            "size": 26
+                        },
+                        {
+                            "name": "Bluesun Hotel Neptun",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Meteor",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Punta",
+                            "size": 26
+                        },
+                        {
+                            "name": "Hotel Argosy",
+                            "size": 26
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cluster 2",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Family Apartments NOVI",
+                            "size": 10
+                        },
+                        {
+                            "name": "Belvedere Resort",
+                            "size": 10
+                        },
+                        {
+                            "name": "Plat Hotels & Villas",
+                            "size": 10
+                        },
+                        {
+                            "name": "Petalon Resort",
+                            "size": 10
+                        },
+                        {
+                            "name": "Bluesun Apartments Alan",
+                            "size": 10
+                        },
+                        {
+                            "name": "Medena Apartments",
+                            "size": 10
+                        },
+                        {
+                            "name": "Vranjica Belvedere Apartments",
+                            "size": 10
+                        },
+                        {
+                            "name": "The Residence Hotel",
+                            "size": 10
+                        },
+                        {
+                            "name": "Imperial Hotel",
+                            "size": 10
+                        },
+                        {
+                            "name": "Miran Hotel",
+                            "size": 10
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": []
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Cluster 3",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Feral Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Marco Polo Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Korcula Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Hedera Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Narcis Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Conte Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Pinija Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Vis Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Liburna Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Park Hotel Rovinj",
+                            "size": 72
+                        },
+                        {
+                            "name": "Mimosa Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Biokovo Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Astarea 2 Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Dubrovnik Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Zagreb Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Adriatic Hotel Biograd n/m",
+                            "size": 72
+                        },
+                        {
+                            "name": "Kornati Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Tragos Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Lafodia Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Medena Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Solaris Hotel Ivan",
+                            "size": 72
+                        },
+                        {
+                            "name": "Solaris Hotel Jure",
+                            "size": 72
+                        },
+                        {
+                            "name": "Solaris Hotel Niko",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bluesun Hotel Borak",
+                            "size": 72
+                        },
+                        {
+                            "name": "Sagitta Holiday Village",
+                            "size": 72
+                        },
+                        {
+                            "name": "Croatia Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Iberostar Albatros Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Iberostar Epidaurus Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Astarea 1 Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Sumratin Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Ariston Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Dubrovnik Palace Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "More Hotel Dubrovnik",
+                            "size": 72
+                        },
+                        {
+                            "name": "Rixos Libertas Dubrovnik",
+                            "size": 72
+                        },
+                        {
+                            "name": "Lero Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Splendid Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Uvala Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Berkeley Hotel Dubrovnik",
+                            "size": 72
+                        },
+                        {
+                            "name": "Komodor Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Kompas Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Admiral Grand Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bellevue Hotel Orebic",
+                            "size": 72
+                        },
+                        {
+                            "name": "Podgorka Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bella Vista Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Zora Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Solaris Hotel Andrija",
+                            "size": 72
+                        },
+                        {
+                            "name": "Solaris Hotel Jakov",
+                            "size": 72
+                        },
+                        {
+                            "name": "Olympia Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bluesun Hotel Elaphusa",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bluesun Hotel Bonaca",
+                            "size": 72
+                        },
+                        {
+                            "name": "Diadem Aparthotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "The View Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Aurora Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Ambasador Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Admiral Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Kristal Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Cavtat Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Adriatic Hotel Dubrovnik",
+                            "size": 72
+                        },
+                        {
+                            "name": "Neptun Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Eden Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Istra Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Maestral Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Laguna Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Dalmacija Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Minerva Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Punta Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Punta Complex - Villa Arausa  Arausana  Antonina",
+                            "size": 72
+                        },
+                        {
+                            "name": "Bluesun Hotel Alan",
+                            "size": 72
+                        },
+                        {
+                            "name": "Ilirija Hotel",
+                            "size": 72
+                        },
+                        {
+                            "name": "Adriatiq Hotel Hvar",
+                            "size": 72
+                        },
+                        {
+                            "name": "Waterman Svpetrvs Resort",
+                            "size": 72
+                        },
+                        {
+                            "name": "Meteor Hotel",
+                            "size": 72
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": []
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Cluster 4",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Marina Hotel",
+                            "size": 27
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": []
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": [
+                        {
+                            "name": "Hotel Vis",
+                            "size": 27
+                        },
+                        {
+                            "name": "Bluesun Hotel Marina",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Jure",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Niko",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Ivan",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Istra",
+                            "size": 27
+                        },
+                        {
+                            "name": "Bluesun Hotel Elaphusa",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Neptun",
+                            "size": 27
+                        },
+                        {
+                            "name": "GH Park",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Adriatica",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Medulin",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Plavi",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Laguna Molindrio",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Pical",
+                            "size": 27
+                        },
+                        {
+                            "name": "Valamar Pinia",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Park Plaza Verudela",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Amfora",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Sol Garden Istra",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Podgorka",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Lero",
+                            "size": 27
+                        },
+                        {
+                            "name": "Bluesun Hotel Alga",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotelsko naselje Waterman ",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Aurora",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Opatija",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Minerva",
+                            "size": 27
+                        },
+                        {
+                            "name": "Hotel Ariston ",
+                            "size": 27
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cluster 5",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Valamar Lacroma Dubrovnik",
+                            "size": 6
+                        },
+                        {
+                            "name": "The Pucic Palace",
+                            "size": 6
+                        },
+                        {
+                            "name": "Hotel Luxe",
+                            "size": 6
+                        },
+                        {
+                            "name": "Jupiter Luxury Hotel",
+                            "size": 6
+                        },
+                        {
+                            "name": "Hotel Lapad",
+                            "size": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": [
+                        {
+                            "name": "Hotel Uvala",
+                            "size": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Cluster 6",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Grand Villa Argentina",
+                            "size": 6
+                        },
+                        {
+                            "name": "Hotel Bellevue Dubrovnik",
+                            "size": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": [
+                        {
+                            "name": "Grand Hotel Park",
+                            "size": 6
+                        },
+                        {
+                            "name": "Hilton Imperial Dubrovnik",
+                            "size": 6
+                        },
+                        {
+                            "name": "Hotel Dubrovnik Palace",
+                            "size": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": [
+                        {
+                            "name": "Hotel Excelsior",
+                            "size": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cluster 7",
+            "children": [
+                {
+                    "name": "Supplier: OHG",
+                    "children": [
+                        {
+                            "name": "Hilton Imperial Dubrovnik",
+                            "size": 4
+                        },
+                        {
+                            "name": "Grand Hotel Park",
+                            "size": 4
+                        }
+                    ]
+                },
+                {
+                    "name": "Supplier: Cosmos",
+                    "children": []
+                },
+                {
+                    "name": "Supplier: Adriatica",
+                    "children": [
+                        {
+                            "name": "Hotel Excelsior",
+                            "size": 4
+                        },
+                        {
+                            "name": "Hotel Dubrovnik Palace",
+                            "size": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

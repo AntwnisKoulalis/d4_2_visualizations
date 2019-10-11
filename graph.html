@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html lang="en">
+	
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script>
+		var drawthegraphthing = function(data, numclusters) {
+			// basics
+			var margin = {top: 0, right: 0, bottom: 0, left: 0},
+			    width = 1660 - margin.left - margin.right,
+			    height = 890 - margin.top - margin.bottom;
+			// var n = 200,
+			//     m = 10,
+			//     padding = 12,
+			//     radius = d3.scale.sqrt().range([0, 12]),
+			//     color = d3.scale.category10().domain(d3.range(m));
+			var n = data.length,
+				m = numclusters,
+				padding = 12,
+				radius = d3.scale.sqrt().range([0, 8]),
+				color = d3.scale.category10().domain(d3.range(m));
+			var clusterColours = [];
+			var getClusterColour = function(clusterName) {
+        var k = 0.1;
+				for (var cluster = 0; cluster < clusterColours.length; ++cluster) {
+					
+					if (clusterColours[cluster].name == clusterName) {
+k += 0.1;
+						return clusterColours[cluster].colour;
+						// return clusterColours[cluster].colour.darker(k);
+					}
+				}
+				var colour = {
+					name: clusterName,
+					colour: color(clusterColours.length)
+				};
+				clusterColours.push(colour);
+				return colour.colour;
+			};
+			// random data
+			// var nodes = d3.range(n).map(function() {
+			//   var i = Math.floor(Math.random() * m),
+			//       v = (i + 1) / m * -Math.log(Math.random());
+			//   return {
+			//   	color: color(i),
+			//     radius: radius(v)
+			//   };
+			// });
+			var nodes = d3.range(n).map(function(a, b, c, d, e) {
+				var node = data[a];
+				return {
+					data: node,
+					color: getClusterColour(node.cluster),
+					radius: radius(node.size)
+				};
+			});
+		function svg() {
+			this.style("left", function(d) { return d.x + "px"; });
+		}
+		// defining the position
+		function position() {
+			this.style("left", function(d) { return d.x + "px"; })
+			.style("top", function(d) { return d.y + "px"; })
+			.style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+			.style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+		}
+			// forced layout
+			var force = d3.layout.force()
+			    .nodes(nodes)
+			    .size([width, height])
+			    .gravity(0)
+			    .charge(0)
+			    .linkDistance(20)
+			    .on("tick", tick)
+			    .start();
+	/////// declaring
+			var svg = d3.select("body").append("svg","div")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom)
+			  .append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+			var body = d3.selectAll("body")
+				.call(d3.behavior.zoom().scaleExtent([1, 168]).on("zoom", zoom))
+				.append("g");
+			// force
+			var circle = svg.selectAll("circle")
+			    .data(nodes)
+			  .enter().append("circle")
+			    .attr("r", function(d) { return d.radius; })
+			    .style("fill", function(d) { return d.color; })
+			    .text(function(d) { return d.data.name; })
+			    .call(force.drag);
+			// var nodesEnter = nodes.enter()
+		 //      .attr("class", "node")
+			// nodesEnter.append("circle:text")
+		 //      .attr("class", "name")
+		 //      .text(function(d) { return d.id });
+		 //  	node.exit().remove();
+			function tick(e) {
+			  circle
+			      .each(cluster(10 * e.alpha * e.alpha))
+			      .each(collide(.5))
+			      .attr("cx", function(d) { return d.x; })
+			      .attr("cy", function(d) { return d.y; });
+			}
+			// Move d to be adjacent to the cluster node.
+			function cluster(alpha) {
+			  var max = {};
+			  // locating the largest node in each cluster set
+			  nodes.forEach(function(d) {
+			    if (!(d.color in max) || (d.radius > max[d.color].radius)) {
+			      max[d.color] = d;
+			    }
+			  });
+			  return function(d) {
+			    var node = max[d.color],
+			        l,
+			        r,
+			        x,
+			        y,
+			        i = -1;
+			    if (node == d) return;
+			    x = d.x - node.x;
+			    y = d.y - node.y;
+			    l = Math.sqrt(x * x + y * y);
+			    r = d.radius + node.radius;
+			    if (l != r) {
+			      l = (l - r) / l * alpha;
+			      d.x -= x *= l;
+			      d.y -= y *= l;
+			      node.x += x;
+			      node.y += y;
+			    }
+			  };
+			}
+			// resolving collisions
+			function collide(alpha) {
+			  var quadtree = d3.geom.quadtree(nodes);
+			  return function(d) {
+			    var r = d.radius + radius.domain()[1] + padding,
+			        nx1 = d.x - r,
+			        nx2 = d.x + r,
+			        ny1 = d.y - r,
+			        ny2 = d.y + r;
+			    quadtree.visit(function(quad, x1, y1, x2, y2) {
+			      if (quad.point && (quad.point !== d)) {
+			        var x = d.x - quad.point.x,
+			            y = d.y - quad.point.y,
+			            l = Math.sqrt(x * x + y * y),
+			            r = d.radius + quad.point.radius + (d.color !== quad.point.color) * padding;
+			        if (l < r) {
+			          l = (l - r) / l * alpha;
+			          d.x -= x *= l;
+			          d.y -= y *= l;
+			          quad.point.x += x;
+			          quad.point.y += y;
+			        }
+			      }
+			      return x1 > nx2
+			          || x2 < nx1
+			          || y1 > ny2
+			          || y2 < ny1;
+			    });
+			  };
+			}
+			// zoom & pan
+			var x = d3.scale.linear()
+			    .domain([-width / 2, width / 2])
+			    .range([0, width]);
+			var y = d3.scale.linear()
+			    .domain([-height / 2, height / 2])
+			    .range([height, 0]);
+			svg.append("div")
+			    .attr("width", width)
+			    .attr("height", height);
+			function zoom() {
+			  svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+			}
+		}
+		d3.json('flare.json', function(err, data, root, error, div) {
+			var nodeData = [];
+			var clusters = data.children;
+			for (var cluster = 0; cluster < clusters.length; ++cluster) {
+				var suppliers = clusters[cluster].children;
+				for (var supplier = 0; supplier < suppliers.length; ++supplier) {
+					var products = suppliers[supplier].children;
+					for (var product = 0; product < products.length; ++product) {
+						var node = {
+							cluster: clusters[cluster].name,
+							supplier: suppliers[supplier].name,
+							name: products[product].name,
+							size: suppliers.length
+						};
+						nodeData.push(node);
+					}
+				}
+			}
+			drawthegraphthing(nodeData, clusters.length);
+			//console.log(nodeData);
+		});
+		</script>
+	</body>
+</html>
